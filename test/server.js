@@ -1,6 +1,15 @@
+/*
+  LOGIN.JS file should have:
+          module.exports = {
+            login: '<spotify login>',
+            password: '<spotify password>'
+          };
+
+ */
+
 var express = require('express');
 var Spotify = require('../lib/spotify.js');
-var login = require('login.js');
+var login = require('./login.js');
 var app = express();
 
 app.use(require('morgan')('dev'));

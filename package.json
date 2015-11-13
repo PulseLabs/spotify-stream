@@ -14,12 +14,15 @@
     "ws": "~0.6.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/TooTallNate/node-spotify-web.git"
   },
   "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "morgan": "^1.6.1"
+  }
 }
