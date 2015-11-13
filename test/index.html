@@ -1,0 +1,40 @@
+
+
+
+<html ng-app="napp">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script>
+var app = angular.module("napp", []);
+angular.module('napp', []).config(function($sceProvider) {
+  // Completely disable SCE.  For demonstration purposes only!
+  // Do not use in new projects.
+  $sceProvider.enabled(false);
+});
+angular.module("napp").controller("nappCtrl", function($scope) {
+  $scope.link = []; 
+  $scope.post = function (uri) {
+    $scope.link.push( 'http://127.0.0.1:8888/music/' + uri);
+
+  };
+});
+</script>
+<body>
+
+<div ng-controller="nappCtrl">
+
+<h2>My Note</h2>
+<form>
+    <input ng-model="inputUrl"class='text' type='text' name='url'>
+    <input ng-click="post(inputUrl); inputUrl='';" type='submit' value='Shorten'>
+</form>
+<div ng-repeat="l in link">
+<audio controls>
+  <source  ng-src="{{l}}" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+</div>
+
+
+</body>
+</html>
