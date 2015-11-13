@@ -6,10 +6,11 @@
           };
 
  */
+var login = require('./login.js');
+
 
 var express = require('express');
 var Spotify = require('../lib/spotify.js');
-var login = require('./login.js');
 var app = express();
 
 app.use(require('morgan')('dev'));
@@ -45,5 +46,5 @@ Spotify.login(login.login, login.password, function (err, spotify) {
 
 });
 
-app.listen(8888);
+app.listen(4569);
 console.log('running');
