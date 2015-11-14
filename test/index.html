@@ -11,7 +11,7 @@ angular.module('napp', []).config(function($sceProvider) {
 angular.module("napp").controller("nappCtrl", function($scope) {
   $scope.link = []; 
   $scope.post = function (uri) {
-    $scope.link.push( 'http://127.0.0.1:8888/music/' + uri);
+    $scope.link.push( 'http://127.0.0.1:4569/music/' + uri);
 
   };
 });
@@ -20,7 +20,7 @@ angular.module("napp").controller("nappCtrl", function($scope) {
 
 <div ng-controller="nappCtrl">
 
-<h2>My Note</h2>
+<h2>Napp</h2>
 <form>
 Spotify URI: 
     <input ng-model="inputUrl"class='text' type='text' name='url'>
